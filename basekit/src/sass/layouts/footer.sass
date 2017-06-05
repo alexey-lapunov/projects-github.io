@@ -1,0 +1,46 @@
+.footer
+  background-color: #1e262c
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 35px
+    padding-bottom: 35px
+
+  &-logo
+    width: 35px
+    height: 28px
+    background-size: cover!important
+
+  &-info
+    font-family: Lora
+    font-weight: 400
+    font-size: 15px
+    text-align: right
+
+    &__title
+      color: #ffffff
+      margin-bottom: 5px
+
+    &__description
+      color: #8b9196
+
+@media only screen and (max-width: 800px)
+  .footer__content
+    padding-top: 10px
+    padding-bottom: 10px
+
+  .footer-info
+    font-size: 12px
+
+@media only screen and (max-width: 320px)
+  .footer-logo
+    width: 25px
+    height: 21px
+
+  .footer-info
+    font-size: 10px
+
+    &__title
+      margin-bottom: 0

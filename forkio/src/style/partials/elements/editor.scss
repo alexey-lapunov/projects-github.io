@@ -1,0 +1,102 @@
+.editor {
+
+  padding-top: 48px;
+  padding-bottom: 70px;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__specification {
+    @include font-size(14);
+
+    color: #848e97;
+
+    margin-bottom: 67px;
+  }
+
+
+  &__title {
+    @include font-size(54);
+    font-weight: 700;
+
+    color: #635c73;
+
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    font-family: Source Sans Pro;
+    @include font-size(21);
+    line-height: 1.6em;
+
+    color: #323232;
+
+    margin-bottom: 35px;
+  }
+
+  &-pagehead {
+    width: 410px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 700;
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+
+
+    }
+
+    &__button {
+      display: flex;
+
+      height: 26px;
+
+      padding: 4px  10px;
+      margin-right: -1px;
+
+      border: 1px solid #d5d5d5;
+      border-radius: 3px 0 0 3px;
+      background-image: linear-gradient(#fcfcfc, #eee);
+
+      @include font-size(15.41);
+
+      color: #000000;
+
+      &-icon {
+        display: inline-block;
+
+        width: 16px;
+        height: 16px;
+
+        margin-right: 7px;
+
+        background-position: center;
+
+        @for $i from 1 through 3 {
+          &--#{$i} {
+            background-image: url(../img/icon/editor-logo-#{$i}.png);
+          }
+        }
+      }
+    }
+
+    &__count {
+      height: 26px;
+
+      padding: 6px 6px;
+
+      border: 1px solid #d5d5d5;
+      border-radius: 0 3px 3px 0;
+
+      @include font-size(13);
+
+      color: #000000;
+    }
+  }
+}

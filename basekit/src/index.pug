@@ -1,0 +1,27 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+  head(lang="en")
+    include pug/metatags.pug
+    +title('Главная')
+    include pug/styles.pug
+  body
+    include pug/svg.pug
+
+    include pug/includes/header.pug
+    include pug/includes/menu.pug
+    include pug/includes/gradient.pug
+
+    main.main
+      include pug/includes/banner.pug
+      include pug/includes/product.pug
+      include pug/includes/information.pug
+      include pug/includes/news.pug
+      include pug/includes/article
+      include pug/includes/gallery
+      include pug/includes/slider
+      include pug/includes/footer
+
+    include pug/scripts.pug

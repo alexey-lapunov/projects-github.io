@@ -1,0 +1,244 @@
+.article
+  background-color: $section-background
+  
+  &__content
+    padding-top: 50px
+    padding-bottom: 50px
+    
+  &__wrapper
+    background-color: #ffffff
+    padding-bottom: 150px
+
+  &-top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 70px
+
+    &-info
+      width: $article-width-info
+      text-align: center
+      padding-top: 400px
+
+      &__title
+        margin-bottom: 30px
+        
+      &-button
+        border-color: #b6b6b6
+        margin: 0 auto
+
+    &-picture
+      width: calc(100% - #{$article-width-info})
+      height: 850px
+
+      &__img
+        height: 100%
+        object-fit: cover
+        object-position: 50%
+
+  &-bottom
+    display: flex
+    justify-content: center
+    padding-left: 110px
+
+    &__information
+      width: 140px
+
+    &__date
+      margin-bottom: 35px
+
+    &-categories,
+    &-tags
+      margin-bottom: 20px
+      padding-bottom: 25px
+      border-bottom: 2px solid #f6f6f6
+
+    &-share__social
+      cursor: pointer
+      transition: color .3s
+      font-weight: 400
+
+      &:not(:last-of-type)
+        margin-bottom: 20px
+
+      &:nth-of-type(2):hover
+        color: #4099FF
+
+      &:nth-of-type(3):hover
+        color: #3b5998
+
+      &:nth-of-type(4):hover
+        color: #d81212
+
+      &:nth-of-type(2) i
+        margin-right: 15px
+
+      &:nth-of-type(3) i,
+      &:nth-of-type(4) i
+        margin-right: 10px
+
+    &__specification
+      width: calc(63% - 140px)
+      margin-left: 100px
+
+    &__description
+      font-size: 18px
+      font-weight: 400
+      line-height: 2em
+      color: #56595b
+
+      &:not(:last-of-type)
+        margin-bottom: 50px
+
+      &--quote
+        font-style: italic
+        padding-left: 40px
+        color: #1e262c
+
+@media only screen and (max-width: 1400px)
+  .article-bottom__specification
+    width: calc(100% - 140px)
+
+@media only screen and (max-width: 1300px)
+  $article-width-info: 320px
+
+  .article-top-picture
+    width: calc(100% - #{$article-width-info})
+    height: 560px
+
+  .article-top-info
+    width: $article-width-info
+    padding-top: 230px
+
+  .article-bottom
+    padding-left: 30px
+
+  .article-bottom__specification
+    padding-right: 15px
+
+  .article-bottom__description
+    font-size: 14px
+
+  .article-bottom__description:not(:last-of-type)
+    margin-bottom: 20px
+
+@media only screen and (max-width: 800px)
+  $article-width-info: 260px
+
+  .article-top-info
+    width: $article-width-info
+    padding-top: 130px
+
+  .article-top-picture
+    width: calc(100% - #{$article-width-info})
+    height: 400px
+
+  .article-bottom__specification
+    margin-left: 30px
+
+  .article-bottom__date
+    margin-bottom: 16px
+
+  .article-bottom-categories,
+  .article-bottom-tags
+    padding-bottom: 10px
+
+  .article-title
+    margin-bottom: 5px
+
+  .article-bottom-share__social:not(:last-of-type)
+    margin-bottom: 8px
+
+  .article-bottom__description
+    font-size: 12x
+    line-height: 1.5em
+
+  .article__wrapper
+    padding-bottom: 20px
+
+@media only screen and (max-width: 800px)
+  $article-width-info: 220px
+
+  .article-top-info
+    width: $article-width-info
+    padding-top: 130px
+
+  .article-top-picture
+    width: calc(100% - #{$article-width-info})
+    height: 400px
+
+  .article-top-picture
+    height: 280px
+
+  .article-top-info
+    padding-top: 70px
+
+  .article-bottom__specification
+    width: 100%
+    margin-left: 0
+    margin-bottom: 50px
+
+  .article-bottom
+    display: flex
+    flex-direction: column-reverse
+    padding: 0
+
+    &__information
+      display: flex
+      justify-content: space-between
+      width: 100%
+      margin: 0
+
+    &__date
+      font-size: 12px
+
+    &-tags
+      width: 80px
+
+    &-share__social
+      font-size: 12px
+
+    &-categories,
+    &-tags
+      border: none
+
+    &__description:not(:last-of-type)
+      margin-bottom: 10px
+
+  .article-title
+    font-size: 10px
+
+@media only screen and (max-width: 600px)
+  .article__content
+    padding-top: 10px
+    padding-bottom: 10px
+
+@media only screen and (max-width: 480px)
+  .article-bottom__specification
+    padding-right: 0
+
+  .article-bottom__description
+    font-size: 13px
+
+  .article-top
+    flex-direction: column
+
+    &-info
+      width: 100%
+      margin-bottom: 20px
+
+    &-picture
+      width: 100%
+
+  .article-bottom-share__social,
+  .article-bottom__date
+    font-size: 10px
+
+  .article-bottom-tags
+    width: 60px
+
+  .article-title
+    font-size: 9px
+
+  .article-description
+    font-size: 10px
+

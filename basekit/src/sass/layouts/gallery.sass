@@ -1,0 +1,100 @@
+.gallery
+  background-color: $section-background
+
+  &__content
+    padding: 50px 0 50px 0
+
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+
+  &-block
+    width: 50%
+    height: 375px
+
+    &__wrapper
+      display: flex
+      width: 50%
+
+      &:nth-of-type(1) .gallery-block__picture
+        background-image: url(../images/gallery-1.jpg)
+
+      &:nth-of-type(2) .gallery-block__picture
+        background-image: url(../images/gallery-2.jpg)
+
+      &:nth-of-type(3) .gallery-block__picture
+        background-image: url(../images/gallery-3.jpg)
+
+      &:nth-of-type(4) .gallery-block__picture
+        background-image: url(../images/gallery-4.jpg)
+
+    &__picture
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 0 10px
+      background-color: #ffffff
+      text-align: center
+      font-size: 16px
+
+    &__title
+      margin-bottom: 25px
+      text-transform: uppercase
+      color: #1e262c
+
+    &__description
+      font-family: Lora
+      font-weight: 400
+      color: #56595b
+
+@media only screen and (max-width: 1400px)
+  .gallery-block
+    height: 300px
+
+@media only screen and (max-width: 1300px)
+  .gallery-block
+    height: 230px
+
+    &__title
+      font-size: 13px
+
+    &__description
+      font-size: 13px
+
+@media only screen and (max-width: 800px)
+  .gallery-block__wrapper
+    width: 100%
+
+    &:nth-of-type(2)
+      flex-direction: row-reverse
+
+    &:nth-of-type(3)
+      flex-direction: row-reverse
+
+@media only screen and (max-width: 600px)
+  .gallery-block
+    height: 180px
+
+  .gallery__content
+    padding-top: 10px
+    padding-bottom: 10px
+
+
+@media only screen and (max-width: 480px)
+  .gallery-block
+    height: 140px
+
+  .gallery-block__info
+    padding: 5px 0
+
+  .gallery-block__description,
+  .gallery-block__title
+    font-size: 10px
+
+  .gallery-block__title
+    margin-bottom: 15px

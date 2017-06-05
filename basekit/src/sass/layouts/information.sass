@@ -1,0 +1,105 @@
+.information
+  background-color: $section-background
+
+  &__content
+    display: flex
+    justify-content: space-between
+    padding-top: 50px
+    padding-bottom: 50px
+
+  &-picture
+    width: 585px
+    height: 1000px
+
+    &__img
+      object-fit: cover
+      height: 100%
+
+  &__wrapper
+    width: 385px
+    margin: 0 auto
+
+  &-specification
+    width: 100%
+    padding-top: 370px
+    background-color: #ffffff
+    text-align: center
+
+    &__title
+      margin-bottom: 25px
+
+    &__price
+      margin-bottom: 30px
+
+    &__description
+      margin-bottom: 40px
+
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      width: 110px
+      margin: 0 auto
+      margin-bottom: 30px
+      font-size: 13px
+      font-weight: 400
+      user-select: none
+
+    &__size
+      width: 24px
+      height: 24px
+      cursor: pointer
+      border-radius: 50%
+      transition: border .1s
+
+      &.active
+        font-weight: 700
+        border: 2px solid #1e262c
+
+@media only screen and (max-width: 1600px)
+  .information-specification
+    padding-top: 300px
+
+  .information-picture
+    height: 800px
+
+@media only screen and (max-width: 1000px)
+  .information-specification
+    padding-top: 250px
+
+@media only screen and (max-width: 800px)
+  .information-picture
+    height: 600px
+
+  .information-specification
+    padding-top: 160px
+
+  .information__wrapper
+    width: 300px
+
+@media only screen and (max-width: 600px)
+  .information-specification
+    padding-top: 60px
+
+  .information__wrapper
+    width: 220px
+
+  .information-picture
+    height: 450px
+
+  .information__content
+    padding-top: 10px
+    padding-bottom: 10px
+
+
+@media only screen and (max-width: 600px)
+  .information__content
+    flex-direction: column-reverse
+
+  .information-specification__button
+    margin-bottom: 20px
+
+  .information-picture
+    width: 100%
+
+    &__img
+      width: 100%

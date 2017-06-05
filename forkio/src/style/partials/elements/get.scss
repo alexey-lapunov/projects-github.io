@@ -1,0 +1,107 @@
+.get {
+  padding-top: 85px;
+  padding-bottom: 70px;
+
+  background-color: #f4f4f4;
+
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  &-l-block {
+    max-width: 42.7350%;
+
+    padding-top: 18px;
+
+    &-small {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 25px;
+
+       &__img {
+        display: block;
+
+        width: 111px;
+        height: 84px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @for $i from 1 through 4 {
+          &--#{$i} {
+            background-image: url(../img/icon/get-logo-#{$i}.png);
+          }
+        }
+      }
+
+
+
+      &__info {
+        width: 100%;
+        max-width: 73.6%;
+      }
+
+      &__title {
+        @include font-size(16);
+
+        margin-bottom: 20px;
+
+        color: #323232px;
+      }
+
+      &__description {
+        @include font-size(14);
+        line-height: 1.4em;
+
+        color: #848e97;
+      }
+    }
+  }
+
+  &-r-block {
+    max-width: 59.8290%;
+
+    &__title {
+      @include font-size(48);
+
+      color: #8d81ac;
+    }
+  }
+
+  &-background {
+    position: absolute;
+
+    right: 0;
+    bottom: -50px;
+
+    width: 630px;
+    height: 580px;
+
+    border-radius: 10px 0 0 10px;
+
+    background-image: url(../img/background/get-background.jpg);
+    background-repeat: no-repeat;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  }
+}
+
+
+@media (max-width: 1169px) {
+
+  .get {
+
+    &-background {
+      width: 500px;
+    }
+
+    &-r-block__title {
+      font-size: 2.8em;
+    }
+  }
+}

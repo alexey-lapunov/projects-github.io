@@ -1,0 +1,59 @@
+.fork {
+  padding-top: 112px;
+  padding-bottom: 540px;
+
+  background-image: url(../img/background/fork.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    @include font-size(82);
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+  }
+
+  &__description {
+    font-family: Lato;
+    @include font-size(30);
+
+    color: #8d81ac;
+
+    margin-bottom: 15px;
+  }
+
+  &__specification {
+    @include font-size(16);
+
+    color: #848e97;
+  }
+
+  &__button {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 50%);
+
+    height: 62px;
+    padding: 21px 68px;
+
+    background-color: #8d81ac;
+
+    border-radius: 30px;
+
+    @include font-size(21);
+    font-weight: 700;
+
+    color: #ffffff;
+  }
+}

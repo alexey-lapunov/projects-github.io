@@ -1,0 +1,102 @@
+.logo-block {
+  width: 153px;
+  height: 41px;
+
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  &__icon {
+    width: 43px;
+    height: 41px;
+
+    background-image: url(../img/icon/header-logo.png);
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-family: Lato;
+    font-weight: 700;
+    @include font-size(24);
+
+    text-transform: uppercase;
+
+    color: #333333;
+
+    & span {
+      color: #8d81ac;
+    }
+  }
+}
+
+.header {
+  background-color: #ffffff;
+
+  padding: 30px 0;
+
+  font-weight: 700;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+
+  &-r-block {
+    width: 680px;
+
+    &__nav {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    &__link {
+      position: relative;
+
+      @include font-size(16);
+
+      color: #635c73;
+
+      &:before {
+        position: absolute;
+
+        content: '';
+
+        bottom: -5px;
+        width: 100%;
+
+        border-bottom: 4px solid #635c73;
+
+        transform: scale(0);
+        transition: transform .5s;
+      }
+
+      &:hover:before {
+        transform: scale(1);
+      }
+    }
+
+    .active {
+      height: 38px;
+
+      padding: 12px 36px;
+
+      background-color: #8d81ac;
+
+      border-radius: 30px;
+
+      color: #ffffff;
+
+      &:before {
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+*
+  box-sizing: border-box
+
+body
+  font-family: Montserrat
+  font-weight: 700
+  overflow-x: hidden
+  &.active
+    overflow-y: hidden
+
+[class*="__content"]
+  max-width: 1600px
+  width: 100%
+  margin: 0 auto
+  padding: 0 75px
+
+.icon
+  display: inline-block
+  vertical-align: middle
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+  appearance: none
+
+
+.site-container
+  margin: 0 auto
+  padding:
+    left: rem-calc(map-get($grid-column-gutter, small))
+    right: rem-calc(map-get($grid-column-gutter, small))
+  +breakpoint(medium)
+    max-width: $global-width + rem-calc(map-get($grid-column-gutter, medium))
+    padding:
+      left: rem-calc(map-get($grid-column-gutter, medium)) / 2
+      right: rem-calc(map-get($grid-column-gutter, medium)) / 2
+
+
+.container
+  margin: 0 auto
+  max-width: $global-width
+
+h1, h2, h3, h4, h5, h6, p, figure, figcaption
+  margin: 0
+
+li
+  list-style: none
+
+.link
+  display: inline-block
+  text-decoration: none
+
+@media only screen and (max-width: 1000px)
+  [class*="__content"]
+    padding: 0 20px
+
+@media only screen and (max-width: 600px)
+  [class*="__content"]
+    padding: 10px 5px

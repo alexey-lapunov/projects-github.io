@@ -1,0 +1,178 @@
+.slider
+  background-color: $section-background
+
+  &__content
+    padding: 50px 0 100px 0
+    overflow: hidden
+
+  &-container
+    &-common
+      overflow: hidden
+      width: 380px
+      padding-top: 160px
+
+      .swiper-slide
+        width: 100%!important
+
+    &-main
+      position: relative
+      max-width: 1070px
+      margin: 0 auto
+      overflow: hidden
+
+    &__slide
+      display: flex
+      justify-content: flex
+      width: 100%
+      height: 500px
+
+    &-info
+      background-color: #ffffff
+
+    &__pagination
+      position: absolute
+      width: 380px!important
+      bottom: 30px!important
+      text-align: center
+      z-index: 100
+
+      & .swiper-pagination-bullet
+        width: 15px
+        height: 15px
+
+        &.swiper-pagination-bullet-active
+          background-color: #1e262c
+
+    &__title
+      font-size: 25px
+      font-weight: 400
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 25px
+
+    &__description
+      font-size: 18px
+      text-align: center
+      font-weight: 400
+
+    &-picture
+      width: calc(100% - 380px)
+      &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__button-block
+      position: absolute
+      right: 20px
+      bottom: 25px
+      display: flex
+      justify-content: space-between
+      flex-direction: row-reverse
+      width: 105px
+      z-index: 7
+
+    &__button-next,
+    &__button-prev
+      position: static
+      width: 45px
+      height: 45px
+      background-image: none
+      background-color: #696969
+      box-shadow: 0 0 3px 1px #000000
+      margin: 0
+
+    &__button-prev &-button__arrow
+      transform: translate(-50%, -50%) rotate(180deg)
+
+    &-button__arrow
+      position: relative
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 16px
+      height: 14px
+      background: url(../images/arrow.png) no-repeat
+      background-size: cover
+      background-position: 50% 50%
+
+
+@media only screen and (max-width: 800px)
+  .slider-container__slide
+    height: 300px
+
+  .slider-container-common
+    width: 280px
+    padding-top: 70px
+
+  .slider-container-picture
+    width: calc(100% - 280px)
+
+  .slider-container__pagination
+    width: 280px!important
+
+  .slider-container__title
+    font-size: 17px
+
+  .slider-container__description
+    font-size: 15px
+
+  .slider-container__pagination .swiper-pagination-bullet
+    width: 10px
+    height: 10px
+
+  .slider-container__button-block
+    width: 75px
+
+  .slider-container__button-next,
+  .slider-container__button-prev
+    width: 30px
+    height: 30px
+
+@media only screen and (max-width: 600px)
+  .slider__content
+    padding-top: 10px
+    padding-bottom: 20px
+
+  .slider-container-common
+    width: 200px
+    padding-top: 70px
+
+  .slider-container-picture
+    width: calc(100% - 200px)
+
+  .slider-container__pagination
+    width: 200px!important
+
+  .slider-container__title
+    font-size: 14px
+
+  .slider-container__description
+    font-size: 12px
+
+
+@media only screen and (max-width: 480px)
+  .slider-container__slide
+    height: 230px
+
+  .slider-container-common
+    width: 150px
+    padding-top: 30px
+
+  .slider-container-picture
+    width: calc(100% - 150px)
+
+  .slider-container__pagination
+    width: 150px!important
+
+  .slider-container__title
+    font-size: 10px
+
+  .slider-container__description
+    font-size: 10px
+
+  .slider-container__pagination .swiper-pagination-bullet
+    width: 7px
+    height: 7px
+
+

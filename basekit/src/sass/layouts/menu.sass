@@ -1,0 +1,168 @@
+.menu
+  position: fixed
+  top: 0
+  right: -$menu-width
+  width: $menu-width
+  height: 100vh
+  background-color: #141a1e
+  margin: 0
+  padding: 0
+  overflow-y: auto
+  z-index: 101
+  transition: transform .3s
+
+  &.active
+    transform: translateX(-$menu-width)
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+    padding: 100px 0 35px 0
+
+  &__list
+    text-align: left
+    padding: 0
+    margin: 0
+    margin-bottom: 50px
+
+  &__item
+    height: 40px
+
+  &__item:not(:last-of-type)
+    margin-bottom: 20px
+    
+  &__link
+    width: 100%
+    height: 100%
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 10px 0 0 35px
+    transition: color .3s, background-color .3s
+    color: #868c91
+    
+    &:hover
+      background-color: rgba(31, 37, 42, .6)
+      color: #ffffff
+
+  &-bottom-block
+    padding-bottom: 20px
+
+    &__button
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0 40px 0 65px
+      height: 60px
+      background-color: rgba(38, 45, 50, .6)
+      border-bottom: 1px solid #292f35
+      margin-bottom: 35px
+      cursor: pointer
+
+    &__count
+      position: relative
+      font-family: Lora
+      font-weight: 400
+      font-size: 16px
+      color: #ffffff
+
+      & span
+        position: absolute
+        top: 0
+        left: -30px
+
+    &__arrow
+      width: 15px
+      height: 15px
+      border: 2px solid #ffffff
+      border-right: none
+      border-top: none
+      transform: rotate(-45deg)
+      transition: transform .3s
+
+    &__arrow.active
+      transform: rotate(135deg)
+
+    &-list
+      height: 0
+      overflow: hidden
+      transition: height .3s
+
+      &__item
+        display: flex
+        justify-content: space-between
+        padding: 0 $menu-padding
+        margin-bottom: 40px
+
+      &-info
+        &__description
+          font-size: 13px
+          text-transform: uppercase
+          margin-bottom: 10px
+          color: #ffffff
+
+        &__count
+          font-family: Lora
+          font-weight: 400
+          color: #acafb2
+
+      &__price
+        font-size: 16px
+        font-weight: 400
+        color: #ffffff
+
+    &__button-check
+      width: 115px
+      height: 45px
+      margin-left: 245px
+      border: 2px solid rgba(255, 255, 255, .25)
+      font-family: Montserrat
+      font-weight: 700
+      font-size: 12px
+      cursor: pointer
+      outline: none
+      text-transform: uppercase
+      color: #e1e1e1
+      transition: background-color .3s
+
+      &:hover
+        background-color: rgba(38, 45, 50, .6)
+
+@media only screen and (max-width: 1000px)
+  .menu__link
+    font-size: 13px
+
+  .menu__content
+    padding-top: 70px
+
+  .menu-bottom-block__button
+    height: 45px
+
+  .menu-bottom-block__button-check
+    width: 100px
+    height: 40px
+    font-size: 11px
+
+@media only screen and (max-width: 600px)
+  .menu
+    width: 255px
+
+    &-bottom-block__count
+      font-size: 13px
+
+    &-bottom-block__arrow
+      width: 10px
+      height: 10px
+
+    &-bottom-block__button-check
+      margin-left: 130px
+
+    &-bottom-block-list-info__description
+      font-size: 10px
+      margin-bottom: 5px
+
+    &-bottom-block-list-info__count
+      font-size: 10px
+

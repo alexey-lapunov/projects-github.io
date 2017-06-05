@@ -1,0 +1,108 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  background-color: #ffffff;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-icon-block {
+    margin-bottom: 24px;
+  }
+
+  &-logo-block {
+    max-width: 255/1170*100 + %;
+    width: 100%;
+    margin-right: 25px;
+
+
+    &__description {
+      @include font-size(14);
+      line-height: 1.4em;
+
+      color: #848e97;
+    }
+  }
+
+  &-menu-block {
+    max-width: 125/1170*100 + %;
+    width: 100%;
+    
+    margin-right: 75px;
+
+    &__item {
+      margin-bottom: 12px;
+    }
+
+    &__link {
+      @include font-size(15);
+
+      color: #8d81ac;
+    }
+
+    .nav-info {
+      @include font-size(16);
+
+      color: #323232;
+
+      margin-bottom: 22px;
+    }
+  }
+
+  &-contacts-block {
+    max-width: 220/1170*100 + %;
+    width: 100%;
+
+    margin-right: 75px;
+
+    &__title {
+      @include font-size(30);
+
+      color: #3f3f3f;
+
+      margin-bottom: 12px;
+
+      &--fz {
+        @include font-size(16);
+
+        color: #323232;
+
+        margin-bottom: 20px;
+      }
+    }
+
+    &__description {
+      @include font-size(12);
+
+      color: #848e97;
+
+      line-height: 1.4em;
+
+      &--mb {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-information-block {
+
+    &__title {
+      @include font-size(16);
+
+      color: #323232;
+
+      margin-bottom: 25px;
+    }
+
+    &__description {
+      @include font-size(14);
+      line-height: 1.4em;
+
+      color: #848e97;
+    }
+  }
+
+}
